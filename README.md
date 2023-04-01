@@ -127,7 +127,26 @@ and creating another list of functions that need to be implemented for all backe
 - I will create Google Colab Demos showcasing how GNNs built using PyG can be used in TensorFlow and JAX projects (or any other framework) for the users of PyG.
 - I will also create Google Colab Demos showing how the runtime efficiency is greatly improved when using a JAX backend on TPU, compared to the original PyTorch implementation.
 
- 
+ ## Listing Functions !
+ A list of all torch functions used in PyG is to be made, particulary in  
+- torch_geometric
+- torch_geometric.nn
+- torch_geometric.data
+- torch_geometric.loader
+- torch_geometric.sampler
+- torch_geometric.datasets
+- torch_geometric.transforms
+- torch_geometric.utils
+- torch_geometric.explain
+- torch_geometric.contrib
+- torch_geometric.graphgym
+- torch_geometric.profile
+
+### 1. An example of list of functions used in torch_geometric.nn file directory in PyG repository  
+> this is just a list of all of the torch functions used in all of the files combined in the directory. I will further show examples of functions with missing backends and frontends in the the below section
+> (PS: I browsed through **167 files** to make a whole list of these functions)
+
+
 
 
 
