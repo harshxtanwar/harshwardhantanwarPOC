@@ -3,6 +3,7 @@
 1. [My understanding Ivy's transpiler](https://github.com/harshxtanwar/harshwardhantanwarPOC/blob/main/README.md#my-understanding-ivys-transpiler)
    - [Transpiling functions eagerly](https://github.com/harshxtanwar/harshwardhantanwarPOC/blob/main/README.md#1-transpiling-function-eagerly)
    - [Ivy transpiling Functions, Models and Frameworks !](https://github.com/harshxtanwar/harshwardhantanwarPOC/blob/main/README.md#2-ivy-transpiling-functions-models-and-frameworks-)
+2. [Objective of the project](https://github.com/harshxtanwar/harshwardhantanwarPOC/blob/main/README.md#objective-of-the-project)
 
 
 ## My understanding Ivy's transpiler
