@@ -6,7 +6,7 @@
 2. [Objective of the project](https://github.com/harshxtanwar/harshwardhantanwarPOC/blob/main/README.md#objective-of-the-project)
 
 
-## My understanding Ivy's transpiler
+## My understanding with Ivy's transpiler
 In this section, I aim to convey to you my understanding of Ivy's transpiler. I will talk about how
 Ivy transpiles functions, modules and frameworks eagerly and lazily !
 
@@ -105,6 +105,7 @@ kwargs
 In this section, I aim to convey to you as to what exactly the projects aims to achieve after it's completion and what all things
 are exactly required to be done in order to complete this project.
 
-
+### 1. Main Objective
+The main 
 
 
