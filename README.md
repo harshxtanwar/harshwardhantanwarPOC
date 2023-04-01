@@ -94,8 +94,8 @@ kwargs
    to the function for tracing.
 """
 
-# The code below this is made private by ivy, but from the example above for eager transpilation, I covered all of the steps
-# that happen when a user trys to transpile anythinf from Ivy, and not just a function.
+# The code below this is made private by ivy, but from the example above for eager transpilation, I covered 
+# all of the steps that happen when a user trys to transpile anythinf from Ivy, and not just a function.
 
 ```
 
