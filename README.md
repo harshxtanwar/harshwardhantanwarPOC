@@ -1,7 +1,7 @@
 # Proof of Concept for PyG - Transpiler Project for Ivy
 
-1. [My understanding Ivy's transpiler](https://github.com/harshxtanwar/harshwardhantanwarPOC/edit/main/README.md#my-understanding-ivys-transpiler)
-   - [Transpiling functions eagerly](https://github.com/harshxtanwar/harshwardhantanwarPOC/edit/main/README.md#1-transpiling-function-eagerly)
+1. [My understanding Ivy's transpiler](https://github.com/harshxtanwar/harshwardhantanwarPOC/main/README.md#my-understanding-ivys-transpiler)
+   - [Transpiling functions eagerly](https://github.com/harshxtanwar/harshwardhantanwarPOC/main/README.md#1-transpiling-function-eagerly)
 
 ## My understanding Ivy's transpiler
 In this section, I aim to convey to you my understanding of Ivy's transpiler. I will talk about how
