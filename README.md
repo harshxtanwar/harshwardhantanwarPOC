@@ -4,7 +4,7 @@
    - [Transpiling functions eagerly](https://github.com/harshxtanwar/harshwardhantanwarPOC/blob/main/README.md#1-transpiling-function-eagerly)
    - [Ivy transpiling Functions, Models and Frameworks !](https://github.com/harshxtanwar/harshwardhantanwarPOC/blob/main/README.md#2-ivy-transpiling-functions-models-and-frameworks-)
 2. [Objective of the project](https://github.com/harshxtanwar/harshwardhantanwarPOC/blob/main/README.md#objective-of-the-project)
-
+   - [Main Objective](https://github.com/harshxtanwar/harshwardhantanwarPOC/blob/main/README.md#1-main-objective)
 
 ## My understanding with Ivy's transpiler
 In this section, I aim to convey to you my understanding of Ivy's transpiler. I will talk about how
@@ -106,6 +106,7 @@ In this section, I aim to convey to you as to what exactly the projects aims to 
 are exactly required to be done in order to complete this project.
 
 ### 1. Main Objective
-The main 
+The main aim of this project is to make **Pytorch Geometric (PyG)** compatible with all other machine learning frameworks supported by Ivy  
+like Numpy, Jax, Paddle and Tensorflow. After the successful implementation of this project, users of PyG will be able to 
 
 
