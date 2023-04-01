@@ -58,4 +58,48 @@ kwargs
   return target_graph
 
 ```
- 
+### 2. Ivy transpiling Functions, Models and Frameworks !
+
+In reality, the Ivy's transpiler function is quite flexible, and is able to transpile Functions, Models and Frameworks into a  
+framework of your choice. 
+
+- Ivy can Transpile either functions, trainable models or importable python modules,
+with any number of combinations as many number of times !
+
+- If no “objs” are provided, the function returns a new transpilation function
+which receives only one object as input, making it usable as a decorator.
+
+- If neither “args” nor “kwargs” are specified, then the transpilation will occur
+lazily, upon the first call of the transpiled function as the transpiler need some arguments
+in order to trace all of the functions required to compile a graph, otherwise transpilation is eager.
+
+```
+def transpile(
+   *objs,
+   to: Optional[str] = None,
+   args: Optional[Tuple] = None,
+   kwargs: Optional[dict] = None,
+):
+"""
+objs
+   The functions, models or modules
+   to transpile.
+to
+   The framework to transpile to.
+args
+   The positional arguments to pass
+   to the function for tracing.
+kwargs
+   The keyword arguments to pass
+   to the function for tracing.
+"""
+
+# The code below this is made private by ivy, but from the example above for eager transpilation, I covered all of the steps
+# that happen when a user trys to transpile anythinf from Ivy, and not just a function.
+
+```
+
+
+
+
+
