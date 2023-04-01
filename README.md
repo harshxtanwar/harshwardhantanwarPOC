@@ -2,7 +2,7 @@
 
 1. [My understanding Ivy's transpiler](https://github.com/harshxtanwar/harshwardhantanwarPOC/blob/main/README.md#my-understanding-ivys-transpiler)
    - [Transpiling functions eagerly](https://github.com/harshxtanwar/harshwardhantanwarPOC/blob/main/README.md#1-transpiling-function-eagerly)
-
+   - [Ivy transpiling Functions, Models and Frameworks !](https://github.com/harshxtanwar/harshwardhantanwarPOC/blob/main/README.md#2-ivy-transpiling-functions-models-and-frameworks-)
 ## My understanding Ivy's transpiler
 In this section, I aim to convey to you my understanding of Ivy's transpiler. I will talk about how
 Ivy transpiles functions, modules and frameworks eagerly and lazily !
