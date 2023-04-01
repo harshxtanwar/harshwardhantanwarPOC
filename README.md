@@ -115,4 +115,25 @@ PyG module to a framework of their choice !
 to the original PyTorch implementation.
 
 ### 2. Workflow and how exactly I will proceed with the project
-aaa
+Below are the steps I will follow to work on the project in a chronological order.
+- Finding and creating a list of all of the pyTorch function used in the PyG's Module.
+- Eliminating the functions from the list which already have been implemented in Ivy's both backend and frontend
+- Creating a list of functions that already have been implemented in the backend but don't have any frontend wrapper around them
+and creating another list of functions that need to be implemented for all backends in Ivy along with a frontend wrapper.
+- You can find a list of such function the section below in my proof of concept.
+- After finalising the list, I will start working with multiple pull requests to first finish writing codes for the functions with **missing frontend wrappers** in Ivy's repository.
+- Then I will work on multiple pull requests to implement functions that have **both missing backend handlers and frontend wrapper along with the test cases** in Ivy's repository.
+- Once this is done, I will make a pull request to PyG's repository where I will implement PyG's framework handlers to enable transpilation to provide PyG's users with functions that can transpile PyG to a framework of their choice.
+- I will create Google Colab Demos showcasing how GNNs built using PyG can be used in TensorFlow and JAX projects (or any other framework) for the users of PyG.
+- I will also create Google Colab Demos showing how the runtime efficiency is greatly improved when using a JAX backend on TPU, compared to the original PyTorch implementation.
+
+ 
+
+
+
+
+
+
+
+
+
