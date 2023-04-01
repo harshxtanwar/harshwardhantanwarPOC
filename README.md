@@ -5,6 +5,7 @@
    - [Ivy transpiling Functions, Models and Frameworks !](https://github.com/harshxtanwar/harshwardhantanwarPOC/blob/main/README.md#2-ivy-transpiling-functions-models-and-frameworks-)
 2. [Objective of the project](https://github.com/harshxtanwar/harshwardhantanwarPOC/blob/main/README.md#objective-of-the-project)
    - [Main Objective](https://github.com/harshxtanwar/harshwardhantanwarPOC/blob/main/README.md#1-main-objective)
+   - [Workflow and how exactly I will proceed with the project]()
 
 ## My understanding with Ivy's transpiler
 In this section, I aim to convey to you my understanding of Ivy's transpiler. I will talk about how
@@ -106,7 +107,12 @@ In this section, I aim to convey to you as to what exactly the projects aims to 
 are exactly required to be done in order to complete this project.
 
 ### 1. Main Objective
-The main aim of this project is to make **Pytorch Geometric (PyG)** compatible with all other machine learning frameworks supported by Ivy  
-like Numpy, Jax, Paddle and Tensorflow. After the successful implementation of this project, users of PyG will be able to 
+- The main aim of this project is to make **Pytorch Geometric (PyG)** compatible with all other machine learning frameworks supported by Ivy  
+like Numpy, Jax, Paddle and Tensorflow.
+- After the successful implementation of this project, users of PyG will be able to transpile the whole 
+PyG module to a framework of their choice !
+- The users will highly benefit from this as the runtime efficiency is greatly improved when using a JAX backend on TPU, compared  
+to the original PyTorch implementation.
 
-
+### 2. Workflow and how exactly I will proceed with the project
+aaa
