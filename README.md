@@ -145,7 +145,7 @@ and creating another list of functions that need to be implemented for all backe
 - torch_geometric.profile
 
 ### 1. An example of list of functions used in torch_geometric.nn file directory in PyG repository  
-> this is just a list of all types of functions/modules of the torch used in all of the files combined in the directory. I will further show examples of functions with missing backends and frontends in the the below section
+> this is just a list of all types of functions/modules of the torch used in all of the files combined in the directory. I will further show examples of functions with missing backends and frontends in the the below section  
 > (PS: I had to browse through **167 files** inside of the torch_geometric.nn directory in PyG's repository to make a whole list of these functions)
 
 [
