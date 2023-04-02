@@ -8,6 +8,9 @@
    - [Workflow and how exactly I will proceed with the project](https://github.com/harshxtanwar/harshwardhantanwarPOC/blob/main/README.md#2-workflow-and-how-exactly-i-will-proceed-with-the-project)
 3. [Listing Functions !](https://github.com/harshxtanwar/harshwardhantanwarPOC/blob/main/README.md#listing-functions-)
    - [An example of list of functions used in torch_geometric.nn file directory in PyG repository](https://github.com/harshxtanwar/harshwardhantanwarPOC/blob/main/README.md#1-an-example-of-list-of-functions-used-in-torch_geometricnn-file-directory-in-pyg-repository)
+   - [An example of list of functions used in torch_geometric.data file directory in PyG repository]()
+   - [An example of list of functions used in torch_geometric.loader file directory in PyG repository]()
+   - [An example of list of functions used in torch_geometric.sampler file directory in PyG repository]()
 
 ## My understanding with Ivy's transpiler
 In this section, I aim to convey to you my understanding of Ivy's transpiler. I will talk about how
@@ -133,6 +136,7 @@ and creating another list of functions that need to be implemented for all backe
  A list of all torch functions used in PyG is to be made, particulary in  
  
 > I have listed down all of the torch functions used in torch_geometric.nn, torch_geometric.data, torch_geometric.loader and torch_geometric.sampler below.
+> this is just a list of all types of functions/modules of the torch used in all of the files combined in the directory. I will further show examples of functions with missing backends and frontends in the the below section 
 
 - torch_geometric
 - torch_geometric.nn
@@ -148,16 +152,35 @@ and creating another list of functions that need to be implemented for all backe
 - torch_geometric.profile
 
 ### 1. An example of list of functions used in torch_geometric.nn file directory in PyG repository  
-> this is just a list of all types of functions/modules of the torch used in all of the files combined in the directory. I will further show examples of functions with missing backends and frontends in the the below section  
+ 
 > (PS: I had to browse through **167 files** inside of the torch_geometric.nn directory in PyG's repository to make a whole list of these functions)
 
 [
 torch.nn.parameter , torch.long, torch.no_grad, torch.nn.ModuleList, torch.nn.Linear, torch.nn.LayerNorm, torch.nn.Tanh, torch.cat, 
-torch.nn.softplus, torch.nn.Sigmoid, torch.zeros_like, torch.autograd.grad, torch.zeros, torch.enable_grad, torch.nn.GRU, torch.nn.LSTM, torch.nn.MultiheadAttention, torch.stack, torch.mean, torch.bincount, torch.cumsum, torch.sort, torch.arange, torch.float, torch.log, torch.arange, torch.nn.LayerNorm, torch.nn.MultiheadAttention, torch.nn.init.calculate_gain, torch.nn.init.xavier_normal_ torch.nn.functional.normalize, torch.eye, torch.nn.init.kaiming_uniform_, torch.nn.functional.dropout, torch.nn.ReLu, torch.nn.parameter.UninitializedParameter, torch.nn.BatchNorm1d, torch.sparse_csc, torch.matmul, torch.clamp, torch.sqrt, torch.full, torch.nn.functional.gelu, torch.nn.functional.softmax, torch.nn.functional.leaky_relu, torch.nn.GRUCell, torch.nn.Param, torch.jit._overload, torch.sparse_csc, torch.ones, torch.addmm, torch.nn.BatchNorm1d, torch.nn.InstanceNorm1d, torch.nn.Sequential
-, torch.nn.Identity, torch.nn.MultiheadAttention, torch.exp, torch.tanh, torch.sum, torch.nn.Embedding, torch.nn.functional.gelu, torch.utils.hooks.RemovableHandle, torch.uint8, torch.int8, torch.int32, torch.int64, torch.sparse_coo, torch.sparse_csr, torch.sparse_csc, torch.jit.unused, torch.utils.data.Dataloader, torch.bincount, torch.atan2, torch.cross, torch.index_select, torch.einsum, torch.bmm, torch.ones_like, torch.mul, torch.ones_like, torch.where, torch.is_floating_point, torch.gather, torch.nn.functional.normalize, torch.no_grad, torch.nn.ELU, torch.nn.Conv1d, torch.norm, torch.nn.init.uniform_, torch.onnx.is_in_onnx_export, torch.nn.utils.rnn.pad_sequence, torch.unique, torch.randint, torch.zeros_like, torch.nn.functional.binary_cross_entropy_with_logits, torch.nn.functional.margin_ranking_loss, torch.nn.init.xavier_uniform_, torch.nn.init.uniform_, torch.linalg.vector_norm, torch.cos, torch.sin, torch.sigmoid, torch.randn_like, torch.mean, torch.device, torch.bool, torch.utils.checkpoint.checkpoint, torch.atan2, torch.from_numpy, torch.linspace, torch.nn.modules.loss._Loss, torch.nn.BCEWithLogitsLoss, torch.nn.functional.logsigmoid, torch.clone, torch.rand, torch.randint, torch.ops.torch_cluster.random_walk, torch.jit.export, torch.jit._overload_method, torch.set_grad_enabled, torch.chunk, torch.pow, torch.load, torch.linspace, torch.nn.functional.nll_loss, torch.randperm, torch.log_softmax, torch.empty, torch.nn.functional.batch_norm, torch.cdist, torch.nn.functional.instance_norm, torch.nn.functional.layer_norm, torch.jit.unused, torch.LongTensor, torch.div, torch.empty_like, torch.nn.KLDivLoss, torch.min, torch.is_tensor, torch.logspace, torch.nn.ModulDict, torch.fx.Graph, torch.fx.GraphModule, torch.fx.Node, torch.fx.map_arg, torch.nn.init.orthogonal_, torch.optim.Optimizer, torch.optim.lr_scheduler.LambdaLR, torch.save, torch.optim.lr_scheduler.ReduceLROnPlateau, torch.optim.lr_scheduler, torch.jit.ScriptModule, torch.max 
+torch.nn.softplus, torch.nn.Sigmoid, torch.zeros_like, torch.autograd.grad, torch.zeros, torch.enable_grad, torch.nn.GRU, torch.nn.LSTM, torch.nn.MultiheadAttention, torch.stack, torch.mean, torch.bincount, torch.cumsum, torch.sort, torch.arange, torch.float, torch.log, torch.arange, torch.nn.LayerNorm, torch.nn.MultiheadAttention, torch.nn.init.calculate_gain, torch.nn.init.xavier_normal_ torch.nn.functional.normalize, torch.eye, torch.nn.init.kaiming_uniform_, torch.nn.functional.dropout, torch.nn.ReLu, torch.nn.parameter.UninitializedParameter, torch.nn.BatchNorm1d, torch.sparse_csc, torch.matmul, torch.clamp, torch.sqrt, torch.full, torch.nn.functional.gelu, torch.nn.functional.softmax, torch.nn.functional.leaky_relu, torch.nn.GRUCell, torch.nn.Param, torch.jit._overload, torch.sparse_csc, torch.ones, torch.addmm, torch.nn.BatchNorm1d, torch.nn.InstanceNorm1d, torch.nn.Sequential, torch.nn.Identity, torch.nn.MultiheadAttention, torch.exp, torch.tanh, torch.sum, torch.nn.Embedding, torch.nn.functional.gelu, torch.utils.hooks.RemovableHandle, torch.uint8, torch.int8, torch.int32, torch.int64, torch.sparse_coo, torch.sparse_csr, torch.sparse_csc, torch.jit.unused, torch.utils.data.Dataloader, torch.bincount, torch.atan2, torch.cross, torch.index_select, torch.einsum, torch.bmm, torch.ones_like, torch.mul, torch.ones_like, torch.where, torch.is_floating_point, torch.gather, torch.nn.functional.normalize, torch.no_grad, torch.nn.ELU, torch.nn.Conv1d, torch.norm, torch.nn.init.uniform_, torch.onnx.is_in_onnx_export, torch.nn.utils.rnn.pad_sequence, torch.unique, torch.randint, torch.zeros_like, torch.nn.functional.binary_cross_entropy_with_logits, torch.nn.functional.margin_ranking_loss, torch.nn.init.xavier_uniform_, torch.nn.init.uniform_, torch.linalg.vector_norm, torch.cos, torch.sin, torch.sigmoid, torch.randn_like, torch.mean, torch.device, torch.bool, torch.utils.checkpoint.checkpoint, torch.atan2, torch.from_numpy, torch.linspace, torch.nn.modules.loss._Loss, torch.nn.BCEWithLogitsLoss, torch.nn.functional.logsigmoid, torch.clone, torch.rand, torch.randint, torch.ops.torch_cluster.random_walk, torch.jit.export, torch.jit._overload_method, torch.set_grad_enabled, torch.chunk, torch.pow, torch.load, torch.linspace, torch.nn.functional.nll_loss, torch.randperm, torch.log_softmax, torch.empty, torch.nn.functional.batch_norm, torch.cdist, torch.nn.functional.instance_norm, torch.nn.functional.layer_norm, torch.jit.unused, torch.LongTensor, torch.div, torch.empty_like, torch.nn.KLDivLoss, torch.min, torch.is_tensor, torch.logspace, torch.nn.ModulDict, torch.fx.Graph, torch.fx.GraphModule, torch.fx.Node, torch.fx.map_arg, torch.nn.init.orthogonal_, torch.optim.Optimizer, torch.optim.lr_scheduler.LambdaLR, torch.save, torch.optim.lr_scheduler.ReduceLROnPlateau, torch.optim.lr_scheduler, torch.jit.ScriptModule, torch.max 
 ]
 
+### 2. An example of list of functions used in torch_geometric.data file directory in PyG repository
+> (PS: I had to browse through **19 files** inside of the torch_geometric.data directory in PyG's repository to make a whole list of these functions)
 
+[
+torch.utils.data.DataLoader, torch.utils.data.get_worker_info, torch.cat.torch.tensor, torch.arange, torch.device, torch.full, torch.cumsum, torch.cat, torch.stack, torch.cuda.Stream, torch.arange, torch.unique, torch.empty_like, torch.utils.data.IterDataPipe
+, torch.utils.data.functional_datapipe, torch.utils.data.datapipes.iter.Batcher, torch.utils.data.datapipes.iter.IterBatcher, torch.float, torch.utils.data.Dataset, torch.is_floating_point, torch.load, torch.from_numpy, torch.randn, torch.full, torch.long, torch.equal, torch.nn.utils.rnn.PackedSequence
+]
+
+### 3. An example of list of functions used in torch_geometric.loader file directory in PyG repository
+> (PS: I had to browse through **20 files** inside of the torch_geometric.loader directory in PyG's repository to make a whole list of these functions)
+
+[
+torch.utils.data.dataloader._BaseDataLoaderIter, torch.load, torch.arange, torch.save, torch.stack, torch.utils.data.DataLoader, torch.cat, torch.arange, torch.stack, torch.utils.data.dataloader.default_collate, torch.float, torch.randperm, torch.long, torch.zeros, torch.empty_like, torch.isnan, torch.randint, torch.rand, torch.randint, torch.utils.data.WeightedRandomSampler, torch.get_num_threads, torch.set_num_threads, torch.ops.torch_sparse.ego_k_hop_sample_adj, torch.bool, torch.ops.torch_sparse.ptr2ind, torch.utils.data.get_worker_info, torch.index_select, torch.from_numpy, torch.int64
+]
+
+### 4. An example of list of functions used in torch_geometric.sampler file directory in PyG repository
+> (PS: I had to browse through **4 files** inside of the torch_geometric.sampler directory in PyG's repository to make a whole list of these functions)
+
+[
+torch.Tensor, torch.long, torch.randint, torch.multinomial, torch.ops.torch_sparse.hgt_sample, torch.int64, torch.ops.pyg.hetero_neighbor_sample, torch.ops.pyg.neighbor_sample, torch.ops.torch_sparse.neighbor_sample, torch.ones, torch.cat, torch.arange, torch.stack, torch.from_numpy, torch.empty, torch.device, torch.zeros
+]
 
 
 
