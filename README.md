@@ -12,7 +12,7 @@
    - [An example of list of functions used in torch_geometric.loader](https://github.com/harshxtanwar/harshwardhantanwarPOC/blob/main/README.md#3-an-example-of-list-of-functions-used-in-torch_geometricloader-file-directory-in-pyg-repository)
    - [An example of list of functions used in torch_geometric.sampler](https://github.com/harshxtanwar/harshwardhantanwarPOC/blob/main/README.md#4-an-example-of-list-of-functions-used-in-torch_geometricsampler-file-directory-in-pyg-repository)
 4. [Implementation Example, Missing Torch Frontend](https://github.com/harshxtanwar/harshwardhantanwarPOC/blob/main/README.md#implementation-example-missing-torch-frontend)
-   - [Pytorch Geometric's Code]()
+   - [Pytorch Geometric's Code](https://github.com/harshxtanwar/harshwardhantanwarPOC/blob/main/README.md#1-pytorch-geometrics-code)
 
 ## My understanding with Ivy's transpiler
 In this section, I aim to convey to you my understanding of Ivy's transpiler. I will talk about how
