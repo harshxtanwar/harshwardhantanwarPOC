@@ -270,8 +270,9 @@ BACKEND TEST FUNCTION
 - [ivy_tests/test_ivy/test_functional/test_experimental/test_core/test_statistical.py](https://github.com/unifyai/ivy/blob/6f2a9ba73e886c7665a27982f0ee7e4ef8db8db9/ivy_tests/test_ivy/test_functional/test_experimental/test_core/test_statistical.py#L221)
 
 These are the merged codes of bincount in Ivy's repository ! **But there is no functional wrapper for the frontend of torch to handle torch.bincount**
-We will have to implement the codes for frontend in two files direstories in this case !
-1. 
+We will have to implement the codes for frontend in two files direstories in this case !  
+1. ivy/functional/frontends/torch/utilities.py **to implement the frontend wrapper**
+2. ivy/ivy_tests/test_ivy/test_frontends/test_torch/test_utilities.py **to implement the test case got the frontend wrapper in torch**
 
 
 
