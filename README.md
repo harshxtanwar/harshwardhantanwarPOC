@@ -14,7 +14,7 @@
 4. [Implementation Example, Missing Torch Frontend](https://github.com/harshxtanwar/harshwardhantanwarPOC/blob/main/README.md#implementation-example-missing-torch-frontend)
    - [Pytorch Geometric's Code](https://github.com/harshxtanwar/harshwardhantanwarPOC/blob/main/README.md#1-pytorch-geometrics-code)
    - [Ivy's existing code for torch.bincount](https://github.com/harshxtanwar/harshwardhantanwarPOC/blob/main/README.md#2-ivys-existing-code-for-torchbincount)
-   - [Solution]()
+   - [Solution](https://github.com/harshxtanwar/harshwardhantanwarPOC/blob/main/README.md#3-solution---implementing-torchs-frontend-for-torchbincount)
 
 ## My understanding with Ivy's transpiler
 In this section, I aim to convey to you my understanding of Ivy's transpiler. I will talk about how
