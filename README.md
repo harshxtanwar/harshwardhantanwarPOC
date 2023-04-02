@@ -14,6 +14,7 @@
 4. [Implementation Example, Missing Torch Frontend](https://github.com/harshxtanwar/harshwardhantanwarPOC/blob/main/README.md#implementation-example-missing-torch-frontend)
    - [Pytorch Geometric's Code](https://github.com/harshxtanwar/harshwardhantanwarPOC/blob/main/README.md#1-pytorch-geometrics-code)
    - [Ivy's existing code for torch.bincount](https://github.com/harshxtanwar/harshwardhantanwarPOC/blob/main/README.md#2-ivys-existing-code-for-torchbincount)
+   - [Solution]()
 
 ## My understanding with Ivy's transpiler
 In this section, I aim to convey to you my understanding of Ivy's transpiler. I will talk about how
@@ -274,7 +275,9 @@ We will have to implement the codes for frontend in two files direstories in thi
 1. ivy/functional/frontends/torch/utilities.py **to implement the frontend wrapper**
 2. ivy/ivy_tests/test_ivy/test_frontends/test_torch/test_utilities.py **to implement the test case got the frontend wrapper in torch**
 
+### 3. Solution - Implementing Torch's Frontend for torch.bincount
 
+working on it !
 
 
 
