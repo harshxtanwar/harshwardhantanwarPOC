@@ -7,7 +7,7 @@
    - [Main Objective](https://github.com/harshxtanwar/harshwardhantanwarPOC/blob/main/README.md#1-main-objective)
    - [Workflow and how exactly I will proceed with the project](https://github.com/harshxtanwar/harshwardhantanwarPOC/blob/main/README.md#2-workflow-and-how-exactly-i-will-proceed-with-the-project)
 3. [Listing Functions !](https://github.com/harshxtanwar/harshwardhantanwarPOC/blob/main/README.md#listing-functions-)
-  - [An example of list of functions used in torch_geometric.nn file directory in PyG repository]()
+   - [An example of list of functions used in torch_geometric.nn file directory in PyG repository](https://github.com/harshxtanwar/harshwardhantanwarPOC/blob/main/README.md#1-an-example-of-list-of-functions-used-in-torch_geometricnn-file-directory-in-pyg-repository)
 
 ## My understanding with Ivy's transpiler
 In this section, I aim to convey to you my understanding of Ivy's transpiler. I will talk about how
