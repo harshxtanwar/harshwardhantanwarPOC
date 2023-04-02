@@ -9,7 +9,7 @@
 3. [Listing Functions !](https://github.com/harshxtanwar/harshwardhantanwarPOC/blob/main/README.md#listing-functions-)
    - [An example of list of functions used in torch_geometric.nn file directory in PyG repository](https://github.com/harshxtanwar/harshwardhantanwarPOC/blob/main/README.md#1-an-example-of-list-of-functions-used-in-torch_geometricnn-file-directory-in-pyg-repository)
    - [An example of list of functions used in torch_geometric.data file directory in PyG repository](https://github.com/harshxtanwar/harshwardhantanwarPOC/blob/main/README.md#2-an-example-of-list-of-functions-used-in-torch_geometricdata-file-directory-in-pyg-repository)
-   - [An example of list of functions used in torch_geometric.loader file directory in PyG repository]()
+   - [An example of list of functions used in torch_geometric.loader file directory in PyG repository](https://github.com/harshxtanwar/harshwardhantanwarPOC/blob/main/README.md#3-an-example-of-list-of-functions-used-in-torch_geometricloader-file-directory-in-pyg-repository)
    - [An example of list of functions used in torch_geometric.sampler file directory in PyG repository]()
 
 ## My understanding with Ivy's transpiler
