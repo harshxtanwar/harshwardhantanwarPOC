@@ -11,6 +11,8 @@
    - [An example of list of functions used in torch_geometric.data](https://github.com/harshxtanwar/harshwardhantanwarPOC/blob/main/README.md#2-an-example-of-list-of-functions-used-in-torch_geometricdata-file-directory-in-pyg-repository)
    - [An example of list of functions used in torch_geometric.loader](https://github.com/harshxtanwar/harshwardhantanwarPOC/blob/main/README.md#3-an-example-of-list-of-functions-used-in-torch_geometricloader-file-directory-in-pyg-repository)
    - [An example of list of functions used in torch_geometric.sampler](https://github.com/harshxtanwar/harshwardhantanwarPOC/blob/main/README.md#4-an-example-of-list-of-functions-used-in-torch_geometricsampler-file-directory-in-pyg-repository)
+4. [Implementation Example, Missing Torch Frontend]()
+   - [Pytorch Geometric's Code]()
 
 ## My understanding with Ivy's transpiler
 In this section, I aim to convey to you my understanding of Ivy's transpiler. I will talk about how
@@ -183,9 +185,73 @@ torch.Tensor, torch.long, torch.randint, torch.multinomial, torch.ops.torch_spar
 ]
 
 
-## Implementation Example !
+## Implementation Example, Missing Torch Frontend
+
+torch.bincount function is one such function which is used in Pyg, in the 
+pytorch_geometric/torch_geometric/nn/aggr/quantile.py directory and you can view the use of torch.bincount
+function in this directory at this [link](https://github.com/pyg-team/pytorch_geometric/blob/7469edee6edae1afd8a9dc61b1494ec6412195aa/torch_geometric/nn/aggr/quantile.py#L78)
 
 
+### 1. Pytorch Geometric's Code
+View the link above to view the exact location of PyG's functio and torch.bincount in their repository in github
+
+```
+    def forward(self, x: Tensor, index: Optional[Tensor] = None,
+                ptr: Optional[Tensor] = None, dim_size: Optional[int] = None,
+                dim: int = -2) -> Tensor:
+
+        dim = x.dim() + dim if dim < 0 else dim
+
+        self.assert_index_present(index)
+        assert index is not None  # Required for TorchScript.
+
+        count = torch.bincount(index, minlength=dim_size or 0)
+        cumsum = torch.cumsum(count, dim=0) - count
+
+        q_point = self.q * (count - 1) + cumsum
+        q_point = q_point.t().reshape(-1)
+
+        shape = [1] * x.dim()
+        shape[dim] = -1
+        index = index.view(shape).expand_as(x)
+
+        # Two sorts: the first one on the value,
+        # the second (stable) on the indices:
+        x, x_perm = torch.sort(x, dim=dim)
+        index = index.take_along_dim(x_perm, dim=dim)
+        index, index_perm = torch.sort(index, dim=dim, stable=True)
+        x = x.take_along_dim(index_perm, dim=dim)
+
+        # Compute the quantile interpolations:
+        if self.interpolation == 'lower':
+            quantile = x.index_select(dim, q_point.floor().long())
+        elif self.interpolation == 'higher':
+            quantile = x.index_select(dim, q_point.ceil().long())
+        elif self.interpolation == 'nearest':
+            quantile = x.index_select(dim, q_point.round().long())
+        else:
+            l_quant = x.index_select(dim, q_point.floor().long())
+            r_quant = x.index_select(dim, q_point.ceil().long())
+
+            if self.interpolation == 'linear':
+                q_frac = q_point.frac().view(shape)
+                quantile = l_quant + (r_quant - l_quant) * q_frac
+            else:  # 'midpoint'
+                quantile = 0.5 * l_quant + 0.5 * r_quant
+
+        # If the number of elements is zero, fill with pre-defined value:
+        mask = (count == 0).repeat_interleave(self.q.numel()).view(shape)
+        out = quantile.masked_fill(mask, self.fill_value)
+
+        if self.q.numel() > 1:
+            shape = list(out.shape)
+            shape = (shape[:dim] + [shape[dim] // self.q.numel(), -1] +
+                     shape[dim + 2:])
+            out = out.view(shape)
+
+        return out
+
+```
 
 
 
