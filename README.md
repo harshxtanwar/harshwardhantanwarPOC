@@ -252,6 +252,29 @@ View the link above to view the exact location of PyG's functio and torch.bincou
         return out
 
 ```
+### 2. Ivy's existing code for torch.bincount
+
+BACKEND FUNCTIONAL API
+- [ivy/functional/ivy/experimental/statistical.py](https://github.com/unifyai/ivy/blob/6f2a9ba73e886c7665a27982f0ee7e4ef8db8db9/ivy/functional/ivy/experimental/statistical.py#L268)
+- [ivy/functional/backends/tensorflow/experimental/statistical.py](https://github.com/unifyai/ivy/blob/6f2a9ba73e886c7665a27982f0ee7e4ef8db8db9/ivy/functional/backends/tensorflow/experimental/statistical.py#L102)
+- [ivy/functional/backends/jax/experimental/statistical.py](https://github.com/unifyai/ivy/blob/6f2a9ba73e886c7665a27982f0ee7e4ef8db8db9/ivy/functional/backends/jax/experimental/statistical.py#L82)
+- [ivy/functional/backends/torch/experimental/statistical.py](https://github.com/unifyai/ivy/blob/6f2a9ba73e886c7665a27982f0ee7e4ef8db8db9/ivy/functional/backends/torch/experimental/statistical.py#L118)
+- [ivy/functional/backends/numpy/experimental/statistical.py](https://github.com/unifyai/ivy/blob/6f2a9ba73e886c7665a27982f0ee7e4ef8db8db9/ivy/functional/backends/numpy/experimental/statistical.py#L93)
+
+DATA CLASSES
+- [ivy/data_classes/container/experimental/statistical.py](https://github.com/unifyai/ivy/blob/6f2a9ba73e886c7665a27982f0ee7e4ef8db8db9/ivy/data_classes/container/experimental/statistical.py#L695)
+- [ivy/data_classes/array/experimental/statistical.py](https://github.com/unifyai/ivy/blob/6f2a9ba73e886c7665a27982f0ee7e4ef8db8db9/ivy/data_classes/array/experimental/statistical.py#L288)
+
+BACKEND TEST FUNCTION
+- [ivy_tests/test_ivy/test_functional/test_experimental/test_core/test_statistical.py](https://github.com/unifyai/ivy/blob/6f2a9ba73e886c7665a27982f0ee7e4ef8db8db9/ivy_tests/test_ivy/test_functional/test_experimental/test_core/test_statistical.py#L221)
+
+These are the merged codes of bincount in Ivy's repository ! **But there is no functional wrapper for the frontend of torch to handle torch.bincount**
+We will have to implement the codes for frontend in two files direstories in this case !
+1. 
+
+
+
+
 
 
 
