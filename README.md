@@ -131,6 +131,9 @@ and creating another list of functions that need to be implemented for all backe
 
  ## Listing Functions !
  A list of all torch functions used in PyG is to be made, particulary in  
+ 
+> I have listed down all of the torch functions used in torch_geometric.nn, torch_geometric.data, torch_geometric.loader and torch_geometric.sampler below.
+
 - torch_geometric
 - torch_geometric.nn
 - torch_geometric.data
