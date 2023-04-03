@@ -277,9 +277,56 @@ We will have to implement the codes for frontend in two files direstories in thi
 
 ### 3. Solution - Implementing Torch's Frontend for torch.bincount
 
-working on it !
+> Created a Pull Request for this issue as soon as I spotted it while writing my proposal: https://github.com/unifyai/ivy/pull/13646  
 
+- code snippet for frontend wrapper in ivy/functional/frontends/torch/utilities.py 
+```
+@with_unsupported_dtypes({"1.11.0 and below": ("int64",)}, "torch")
+@to_ivy_arrays_and_back
+def bincount(x, weights=None, minlength=0):
+    return ivy.bincount(x, weights=weights, minlength=minlength)
 
+```
+- code snippet for test function in ivy/ivy_tests/test_ivy/test_frontends/test_torch/test_utilities.py
+```
+# bincount
+@handle_frontend_test(
+    fn_tree="torch.bincount",
+    dtype_and_x=helpers.dtype_and_values(
+        available_dtypes=helpers.get_dtypes("integer"),
+        min_value=1,
+        max_value=2,
+        shape=st.shared(
+            helpers.get_shape(
+                min_num_dims=1,
+                max_num_dims=1,
+            ),
+            key="a_s_d",
+        ),
+    ),
+    test_with_out=st.just(False),
+)
+def test_torch_utilities_bincount(
+    *,
+    dtype_and_x,
+    on_device,
+    fn_tree,
+    frontend,
+    test_flags,
+):
+    input_dtype, x = dtype_and_x
+    helpers.test_frontend_function(
+        input_dtypes=input_dtype,
+        frontend=frontend,
+        test_flags=test_flags,
+        fn_tree=fn_tree,
+        on_device=on_device,
+        x=x[0],
+        weights=None,
+        minlength=0
+    )
+
+```
 
 
 
